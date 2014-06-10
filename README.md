@@ -1,4 +1,0 @@
-Customerinfo
-============
-
-test code
