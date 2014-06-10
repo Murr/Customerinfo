@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+   <link rel="stylesheet/less" type="text/css" href="less/collector.less">
+   <script src="js/less.js"></script>
+  </head>
+  <body>
+
+    <script>
+      $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
+
+      <header>
+        <div class="title">
+          EDIT APPOINTMENT<br>
+          Select customer &amp; vehice
+        </div>
+        <nav>
+          <ul class="nav">
+            <li ><a href="#">Shown</a></li>
+            <li ><a href="#">Missed</a></li>
+            <li ><a href="#">Booked</a></li>
+          </ul>
+        </nav>
+
+      </header>
+
+    <section>
+      <ul class="nav nav-tabs nav-tabs-ext">
+        <li><a href="#customer" data-toggle="tab">Customer and vehicle info</a></li>
+        <li><a href="#servises" data-toggle="tab">Servises</a></li>
+        <li><a href="#conserns" data-toggle="tab">Conserns</a></li>
+        <li><a href="#time" data-toggle="tab">Time and adivisor</a></li>
+        <li><a href="#summary" data-toggle="tab">Summary</a></li>
+      </ul>
+
+      <div class="tab-content full-size">
+        <div class="tab-pane active" id="customer">
+          
+            <div class="tab-content-left">
+              <ul class="nav nav-tabs nav-tabs-sub">
+                <li><a href="#custome" data-toggle="tab">Customer</a></li>
+                <li><a href="#buisness" data-toggle="tab">Buisness customer</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div class="tab-pane active" id="custome">
+                  <form>
+                    <div class="fl_l">
+                      <p>Frist name</p>
+                      <input type="text">
+                    </div>
+                    <div class="fl_l">
+                      <p>Last name</p>
+                      <input type="text">
+                    </div>
+
+                  </form>
+                </div>
+                <div class="tab-pane" id="buisness">...</div>
+                </div>
+
+            </div>
+
+            <div class="tab-content-right">
+              <div>Vehicle info</div>
+            </div>
+          
+        </div>
+        <div class="tab-pane" id="servises">...</div>
+        <div class="tab-pane" id="conserns">...</div>
+        <div class="tab-pane" id="summary">...</div>
+      </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+
+  </body>
+</html>
