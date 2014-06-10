@@ -13,7 +13,7 @@
    <script src="js/less.js"></script>
   </head>
   <body>
-
+  
     <script>
       $('#myTab a').click(function (e) {
         e.preventDefault()
@@ -45,39 +45,169 @@
         <li><a href="#summary" data-toggle="tab">Summary</a></li>
       </ul>
 
-      <div class="tab-content full-size">
+      <div class="tab-content">
         <div class="tab-pane active" id="customer">
-          
-            <div class="tab-content-left">
-              <ul class="nav nav-tabs nav-tabs-sub">
+          <div class="tab-content-left col col-2x scrollable">
+            <ul class="nav nav-tabs nav-tabs-sub">
                 <li><a href="#custome" data-toggle="tab">Customer</a></li>
                 <li><a href="#buisness" data-toggle="tab">Buisness customer</a></li>
-              </ul>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="custome">
+              
+                <form>
+                  <fieldset>
+                    <label for="nameEdit">
+                      Frist name<br>
+                      <input name="nameEdit" value="" type="text">
+                    </label>
+                    <label for="nameEdit">
+                      Last name<br>
+                      <input name="nameEdit" value="" type="text">
+                    </label>
+                  </fieldset>
 
-              <div class="tab-content">
-                <div class="tab-pane active" id="custome">
-                  <form>
-                    <div class="fl_l">
-                      <p>Frist name</p>
-                      <input type="text">
-                    </div>
-                    <div class="fl_l">
-                      <p>Last name</p>
-                      <input type="text">
-                    </div>
+                  <fieldset>
+                    <label for="">
+                      Defolt phone<br>
+                      <input name="" value="" type="text">
+                    </label>
+                    <label for="">
+                      Cell phone<br>
+                      <input name="" value="" type="text">
+                    </label>
+                    <label for="" >There is a<br>first contact</label>
+                    <input name="" value="" type="radio">
+                    </fieldset>
 
-                  </form>
-                </div>
-                <div class="tab-pane" id="buisness">...</div>
-                </div>
+                    <fieldset>
+                    <label for="">
+                      E-mail<br>
+                      <input name="" value="" type="text">
+                    </label>
+                    <label for="">Frist contact</label>
+                    <input name="" value="" type="radio" class="radio">
+                  </fieldset>
+
+                  <p>Address</p>
+
+                  <fieldset>
+                    <label for="">
+                      Street<br>
+                      <input name="" value="" type="text">
+                    </label>
+                  </fieldset>
+
+                  <fieldset>
+                    <label for="">
+                      City<br>
+                      <input name="" value="" type="text">
+                    </label>
+                    <label for="">
+                      ZIP code<br>
+                      <input name="" value="" type="text">
+                    </label>
+                  </fieldset>
+
+                  <fieldset>
+                    <label for="">
+                      Country<br>
+                      <select name="list">
+                        <option value="1">- choose -</option>
+                        <option value="2" selected>Russian Federation</option>
+                      </select>
+                    </label>
+                    <label for="">
+                      State<br>
+                      <select name="list">
+                        <option value="1">- choose -</option>
+                        <option value="2" selected>New Hampshire</option>
+                      </select>
+                    </label>
+                    <label for="">
+                      Province<br>
+                      <select name="list" class="no-active">
+                        <option value="1"selected>- choose -</option>
+                      </select>
+                    </label>
+                  </fieldset>
+
+                  
+                </form>
+              </div>
+
+             <div class="tab-pane" id="buisness">.......................</div>
 
             </div>
+          </div>
+          <div class="tab-content-right col col-2x scrollable">
+            <div>Vehicle info</div>
+              <form>
 
-            <div class="tab-content-right">
-              <div>Vehicle info</div>
-            </div>
-          
+                <fieldset>
+                  <label for="">
+                    VIN number<br>
+                    <input name="" value="" type="text"> <button>Decode</button><img src="">
+                  </label>
+                </fieldset>
+
+                <fieldset>
+                  <label for="">
+                    Manufacture<br>
+                    <select name="list">
+                      <option value="1" selected>- choose -</option>
+                    </select>
+                  </label>
+                  <label for="">
+                    Year<br>
+                    <select name="list">
+                      <option value="1">- choose -</option>
+                      <option value="2" selected>2014</option>
+                    </select>
+                  </label>
+                  <label for="">
+                    Car model<br>
+                    <select name="list">
+                      <option value="1">- choose -</option>
+                      <option value="2" selected>Grand Cherokee (5.7L)</option>
+                    </select>
+                  </label>
+                </fieldset>
+
+                <fieldset>
+                  <label for="">
+                    Enginers<br>
+                    <select name="list" class="no-active">
+                      <option value="1" selected>- choose -</option>
+                    </select>
+                  </label>
+                  <label for="">
+                    Transmissions<br>
+                    <select name="list" class="no-active">
+                      <option value="1" selected>- choose -</option>
+                    </select>
+                  </label>
+                  <label for="">
+                    Driver<br>
+                    <select name="list" class="no-active">
+                      <option value="1" selected>- choose -</option>
+                    </select>
+                  </label>
+                </fieldset>
+
+                <fieldset>
+                  <label for="">
+                    Miliage, km<br>
+                    <input name="" value="" type="text">
+                  </label>
+                </fieldset>
+
+                <div class="test"></div>
+
+              </form>
+          </div>
         </div>
+        
         <div class="tab-pane" id="servises">...</div>
         <div class="tab-pane" id="conserns">...</div>
         <div class="tab-pane" id="summary">...</div>
@@ -88,7 +218,6 @@
     <footer>
 
     </footer>
-
-
+ 
   </body>
 </html>

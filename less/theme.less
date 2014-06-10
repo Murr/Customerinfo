@@ -6,6 +6,40 @@
 	.scrollable;
 }
 
+// колонки
+._col(@s: 3%) {
+  float: left;
+  margin-left: @s;
+
+    &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.col_w(@n, @all, @s: @COLUMN_SPACE){
+  width: ( ( (100% - ((@all - 1) * @s)) / @all ) * @n) + (@n - 1) * @s;
+}
+
+// @n — колонок 
+// @all — всего колонок
+// @s: 3% — промежуток
+.column_width(@n, @all, @s: 3%){
+  ._col(@s);
+  .col_w(@n, @all, @s);
+}
+.col {
+  float: left;
+  //margin-left: 3%; 
+}
+
+.col:first-of-type {
+  margin-left: 0;
+}
+
+.col-2x {
+  .col_w(1, 2, 0%);
+}
+// основная навигация
 .nav-tabs-ext {
     border-bottom: 1px solid @nav-tabs-border-color;
     position: absolute;
@@ -47,8 +81,4 @@
     .nav-justified();
     .nav-tabs-justified();
   }
-}
-
-.nav-tabs-sub{
-	
 }

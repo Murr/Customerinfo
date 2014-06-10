@@ -1,42 +1,76 @@
 
 header{
-	height: 40px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-	.title{
-	width: 200px;
-	float: left;
+.title {
+  width: 200px;
+  float: left;
+}
+  nav {
+
+    ul {
+      float: right;
+
+      li {
+        float: left;
+      }
     }
-	nav{
-
-		ul{
-			float: right;
-
-			li{
-				float: left;
-			}
-		}
-
-	}
+  }
 }
-section{
-	height: 100%;
-    padding-top: 42px;
-    position: relative;
+
+section {
+  padding-top: 42px;
+  position: relative;
+  .full-size;
+
+  .tab-content, .tab-pane{
+    .full-size;
+  }
+  
+}
+
+.tab-pane {
+  position: relative; 
+}
+label{
+  margin: 10px 0 0 0;
+  font-weight: normal;
+
+  input, select {
+    height: 37px;
+    border: 1px solid #e3e3e3;
+    outline: none;
+    padding: 0 10px 0 10px;
+    vertical-align: middle;
+    margin: 15px 20px 0 0;
+
+    &.no-active {
+      background: #efefef;
+      color: #b0b0b0;
+    }
+  }
 
 }
-.tab-pane{
-	position: relative;
-	
+
+input[type="radio"]{
+  display: none;
 }
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 44px;
-    background: #ccc;
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background: #ccc;
+}
+.test{
+  width: 50px;
+  height: 50px;
+  background-color: #eeeeee;
+  
 }

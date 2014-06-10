@@ -11,4 +11,35 @@
   height: 100%;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
-}   
+}
+
+.sprite(@x, @y) {
+   background: url(../images/icons_sprite-01.png) no-repeat;
+   background-position: -(@x*@spriteGrid) -(@y*@spriteGrid);
+}
+.spriteHelper(@image, @x, @y, @spriteX, @spriteY) {
+   background: url("../images/@{image}.png") no-repeat;
+   background-position: -(@x*@spriteX) -(@y*@spriteY);
+}
+.sprite(@image, @x, @y) when (@image = sprite1), (@image = sprite3){
+   @spriteX: 32px;
+   @spriteY: 16px;
+   .spriteHelper(@image, @x, @y, @spriteX, @spriteY);
+}
+.sprite(@image, @x, @y) when (@image = sprite2){
+   @spriteX: 64px;
+   @spriteY: 32px;
+   .spriteHelper(@image, @x, @y, @spriteX, @spriteY);
+}
+.spriteReplace(@x, @y) {
+   .sprite(@x, @y);
+}
+.spriteReplace (@x, @y, @width, @height) {
+   .sprite(@x, @y);
+   width: @width;
+   height: @height;
+}
+
+.test {
+   .spriteReplace(1, 1, 80px, 60px);
+}
