@@ -27,6 +27,7 @@
   ._col(@s);
   .col_w(@n, @all, @s);
 }
+
 .col {
   float: left;
   //margin-left: 3%; 
@@ -41,25 +42,31 @@
 }
 // основная навигация
 .nav-tabs-ext {
-    border-bottom: 1px solid @nav-tabs-border-color;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  border-bottom: 1px solid @nav-tabs-border-color;
+  position: absolute;
+  margin: 0;
+  padding-left: 10px;
+  top: 7px;
+  left: 0;
+  width: 100%;
+  list-style: none;
 
   > li {
     float: left;
-    // Make the list-items overlay the bottom border
     margin-bottom: -1px;
 
-    // Actual tabs (as links)
     > a {
-      margin-right: 2px;
       line-height: @line-height-base;
       border: 1px solid transparent;
-      border-radius: @border-radius-base @border-radius-base 0 0;
+      padding: 4px 18px 6px 19px;
+      letter-spacing: -0.15px;
+      display: block;
+      outline: none;
+      color: #b0b0b0;
+    
       &:hover {
-        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+        //border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+        text-decoration: none;
       }
     }
 
@@ -68,11 +75,15 @@
       &,
       &:hover,
       &:focus {
-        color: @nav-tabs-active-link-hover-color;
-        background-color: @nav-tabs-active-link-hover-bg;
-        border: 1px solid @nav-tabs-active-link-hover-border-color;
+        color: #000000;
+        border: 1px solid @nav-tabs-border-color;
+        text-decoration: none;
+        border-top-color: transparent;
+        background-color: #ffffff;
         border-bottom-color: transparent;
+        box-shadow: 0 -4px 0 rgba(0,0,0,1);
         cursor: default;
+        outline: none;
       }
     }
   }
@@ -82,3 +93,93 @@
     .nav-tabs-justified();
   }
 }
+.nav-tabs-sub {
+  //border-bottom: 1px solid @nav-tabs-border-color;
+  width: 100%;
+  list-style: none;
+  height: 45px;
+  margin: 0;
+  padding-left: 10px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0)) bottom; 
+  background-repeat:no-repeat;
+  background-size:100% 1px;
+
+  &:extend(.clearfix all);
+
+  > li {
+    float: left;
+    line-height: 43px;
+    text-align: center;
+    margin-right: 4%;
+    > a {
+
+      padding: 3px 0 3px 0;
+      position: relative;
+      display: block;
+      outline: none;
+      text-decoration: none;
+      font-size: 13px;
+    
+      &:hover {
+        
+      }
+    }
+
+    &.active > a {
+      &:after {
+      .spritePadded(1264, 36, 90px, 10px);
+      bottom: -1px;
+      z-index: 2;
+      left: 0;
+
+      }
+      &,
+      &:hover,
+      &:focus {
+        padding-top: 0;
+        color: #000000;
+        cursor: default;
+        font-size: 21px;
+        outline: none;
+      }
+
+    }
+
+  }
+}
+/*
+.nav {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  &:extend(.clearfix all);
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: @nav-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: @nav-link-hover-bg;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: @nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: @nav-disabled-link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+  */
