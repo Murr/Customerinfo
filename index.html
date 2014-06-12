@@ -24,13 +24,13 @@
       <header>
         <div class="title">
           EDIT APPOINTMENT<br>
-          Select customer &amp; vehice
+          <span>Select customer &amp; vehice</span>
         </div>
         <nav>
-          <ul class="nav">
+          <ul>
             <li ><a href="#">Shown</a></li>
             <li ><a href="#">Missed</a></li>
-            <li ><a href="#">Booked</a></li>
+            <li class="active"><a href="#">Booked</a></li>
           </ul>
         </nav>
 
@@ -59,11 +59,11 @@
                   <fieldset>
                     <label for="nameEdit">
                       <span>Frist name</span><br>
-                      <input name="nameEdit" value="" type="text">
+                      <input class="inp-name" name="nameEdit" value="" type="text">
                     </label>
                     <label for="nameEdit">
                       <span>Last name</span><br>
-                      <input name="nameEdit" value="" type="text">
+                      <input class="inp-name" name="nameEdit" value="" type="text">
                     </label>
                   </fieldset>
                 </form>
@@ -74,7 +74,7 @@
                   <fieldset>
                     <label for="nameEdit">
                       Frist name<br>
-                      <input name="nameEdit" value="" type="text">
+                      <input class="inp-big" name="nameEdit" value="" type="text">
                     </label>   
                   </fieldset>
                 </form>
@@ -85,130 +85,139 @@
               <fieldset class="field">
                 <label for="">
                   <span>Defolt phone</span><br>
-                  <input name="" value="" type="text">
+                  <input class="inp-phone" name="" value="" type="text">
                 </label>
                 <label for="">
                   <span>Cell phone</span><br>
-                  <input name="" value="" type="text">
+                  <input class="inp-phone" name="" value="" type="text">
                 </label>
-                <label for="radio-1" >There is a<br>first contact
-                <input id="radio-1" name="optionsRadios" value="option1" type="radio">
-                </label>
+                <div class="radio-div">
+                  <label for="radio-1">
+                    <input id="radio-1" name="optionsRadios" value="option1" type="radio">
+                    <span></span>There is a<br>first contact
+                  </label>
+                </div>
+                
                 </fieldset>
 
                 <fieldset class="field">
                 <label for="">
                   <span>E-mail</span><br>
-                  <input name="" value="" type="text">
+                  <input class="inp-big"  name="" value="" type="text">
                 </label>
-                <label for="radio-2">Frist contact
-                <input id="radio-2" name="optionsRadios" value="option1" type="radio" checked>
-                </label>
+                <div class="radio-div">
+                  <label for="radio-2" class="lebel-radio">
+                    <input id="radio-2" name="optionsRadios" value="option1" type="radio" checked>
+                    <span></span>Frist contact
+                  </label>
+                </div>
               </fieldset>
 
-              <p>Address</p>
+              <div class="address">Address</div>
 
               <fieldset>
                 <label for="">
                   Street<br>
-                  <input name="" value="" type="text">
+                  <input class="inp-address" name="" value="" type="text">
                 </label>
               </fieldset>
 
               <fieldset class="field">
                 <label for="">
                   City<br>
-                  <input name="" value="" type="text">
+                  <input class="inp-big" name="" value="" type="text">
                 </label>
                 <label for="">
                   ZIP code<br>
-                  <input name="" value="" type="text">
+                  <input class="inp-mini last-inp" name="" value="" type="text">
                 </label>
               </fieldset>
 
               <fieldset class="field">
                 <label for="">
                   Country<br>
-                  <select name="list">
+                  <select name="list" class="inp-country">
                     <option value="1">- choose -</option>
                     <option value="2" selected>Russian Federation</option>
                   </select>
                 </label>
                 <label for="">
                   State<br>
-                  <select name="list">
+                  <select name="list" class="inp-mini">
                     <option value="1">- choose -</option>
                     <option value="2" selected>New Hampshire</option>
                   </select>
                 </label>
                 <label for="">
                   Province<br>
-                  <select name="list" class="no-active">
+                  <select name="list" class="inp-mini last-inp no-active">
                     <option value="1"selected>- choose -</option>
                   </select>
                 </label>
               </fieldset>
             </form>
           </div>
-          <div class="tab-content-right col col-2x scrollable">
-            <div>Vehicle info</div>
-              <form>
 
+          <div class="tab-content-right col col-2x scrollable">
+            <div class="v-info">Vehicle info</div>
+              <form>
                 <fieldset>
-                  <label for="">
+                  <label for="" class="v-number">
                     VIN number<br>
-                    <input name="" value="" type="text"> <button>Decode</button><img src="">
+                    <input class="inp-vin-number" name="" value="" type="text"> 
+                    <button>Decode</button>
+                    <img src="images/carr.png" alt="img">
                   </label>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="field-mar-big">
                   <label for="">
                     Manufacture<br>
-                    <select name="list">
+                    <select name="list" class="inp-middle">
                       <option value="1" selected>- choose -</option>
                     </select>
                   </label>
                   <label for="">
                     Year<br>
-                    <select name="list">
+                    <select name="list" class="inp-year">
                       <option value="1">- choose -</option>
                       <option value="2" selected>2014</option>
                     </select>
                   </label>
                   <label for="">
                     Car model<br>
-                    <select name="list">
+                    <select name="list" class="inp-middle">
                       <option value="1">- choose -</option>
                       <option value="2" selected>Grand Cherokee (5.7L)</option>
                     </select>
                   </label>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="field">
                   <label for="">
                     Enginers<br>
-                    <select name="list" class="no-active">
+                    <select name="list" class="inp-mini no-active">
                       <option value="1" selected>- choose -</option>
                     </select>
                   </label>
                   <label for="">
                     Transmissions<br>
-                    <select name="list" class="no-active">
+                    <select name="list" class="inp-mini no-active">
                       <option value="1" selected>- choose -</option>
                     </select>
                   </label>
                   <label for="">
                     Driver<br>
-                    <select name="list" class="no-active">
+                    <select name="list" class="inp-mini no-active">
                       <option value="1" selected>- choose -</option>
                     </select>
                   </label>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="field-mar-big">
                   <label for="">
                     Miliage, km<br>
-                    <input name="" value="" type="text">
+                    <input class="inp-km" name="" value="" type="text">
                   </label>
                 </fieldset>
               </form>
@@ -223,7 +232,8 @@
     </section>
 
     <footer>
-
+      <div class="left-button"><a href="#"><span></span>Back to dashboard</a></div>
+      <div class="right-button"><a href="#">Next<span></span></a></div>
     </footer>
  
   </body>
